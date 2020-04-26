@@ -1,0 +1,30 @@
+{
+  "name": "trainingproject",
+  "version": "1.0.0",
+  "description": "Training Project on Node, Express and MongoDB",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nida Khan",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.15.2",
+    "connect-mongodb-session": "^2.3.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.3",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.4.0",
+    "jsonwebtoken": "^8.1.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.9.9",
+    "multer": "^1.4.2",
+    "multer-gridfs-storage": "^4.0.3",
+    "node-read": "^0.1.7",
+    "nodemailer": "^6.4.6",
+    "nodemon": "^2.0.3",
+    "uuid": "^7.0.3"
+  }
+}

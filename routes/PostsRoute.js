@@ -1,0 +1,11 @@
+const express = require('express');
+const router = express.Router();
+const postControllr = require('../controllers/Posts');
+router.post('/', postControllr.create);
+router.get('/', postControllr.findAll);
+// router.get('/:id', postControllr.findAllPostsByUser);
+router.put('/:id',postControllr.UpdatePost);
+router.get('/:id', postControllr.getSinglePost);
+router.get('/sort', postControllr.SortAllPostsByID);
+router.delete('/:id', postControllr.delete);
+module.exports = router;
