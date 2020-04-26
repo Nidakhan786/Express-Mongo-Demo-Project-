@@ -8,7 +8,7 @@ var transporter = nodemailer.createTransport({
     service : 'gmail',
     auth:{
         user: 'nida.cse96@gmail.com',
-        pass: 'nntriplebond'
+        pass: 'helloworld'
     }
 });
 
@@ -19,8 +19,9 @@ exports.create = (req, res) => {
         return res.status(400).send({
             message: "Required field can not be empty"
         });
+       
     }
-
+    console.log(req.file);
     // Create a User
     const user = new User({
         email: req.body.email,
@@ -29,7 +30,8 @@ exports.create = (req, res) => {
         age: req.body.age,
         gender: req.body.gender,
         isActive: req.body.isActive,
-        userType: req.body.userType
+        userType: req.body.userType,
+        myFile:req.file.path
     });
     //Save to database
     user.save().then(data => {

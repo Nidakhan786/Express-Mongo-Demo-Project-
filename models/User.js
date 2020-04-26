@@ -47,7 +47,10 @@ const schema = new mongoose.Schema({
         default: 'Admin',
         required: true
     },
-    myFile:String,
+    myFile:{
+        type:String,
+        required:true
+    },
     post: { 
         type: mongoose.Schema.Types.ObjectId ,
         ref: 'Posts' 
