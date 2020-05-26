@@ -5,7 +5,11 @@ const schema = new mongoose.Schema({
         desc: "The post content",
         type: String,
         required: true
-    },  
+    },
+    likes:[{
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'Like'
+    }],  
     isActive: {
         desc: "is Active.",
         type: Boolean,

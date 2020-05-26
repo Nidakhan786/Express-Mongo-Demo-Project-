@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const postControllr = require('../controllers/Posts');
+const likeControllr = require('../controllers/Like');
 router.post('/', postControllr.create);
+router.post('/like', likeControllr.create);
 router.get('/', postControllr.findAll);
 // router.get('/:id', postControllr.findAllPostsByUser);
 router.put('/:id',postControllr.UpdatePost);

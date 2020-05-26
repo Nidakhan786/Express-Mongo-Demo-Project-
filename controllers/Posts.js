@@ -9,12 +9,13 @@ exports.create = (req, res) => {
     }
 
     // Create a Post
-    const user = new Post({
+    const post = new Post({
         content: req.body.content,
         isActive: req.body.isActive,
         user: req.body.user,
     });
-    user.save().then(data => {
+    post.save().then(data => {
+
         res.send(data);
     }).catch(err => {
         res.status(500).send({
@@ -25,7 +26,7 @@ exports.create = (req, res) => {
 };
 //find all posts
 exports.findAll = (req, res) => {
-    Post.find().populate('user')
+    Post.find().populate('user').populate('likes')
         .then(posts => {
             res.status(200).send(posts);
         }).catch(err => {
