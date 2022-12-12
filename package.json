@@ -13,7 +13,7 @@
     "body-parser": "^1.15.2",
     "connect-mongodb-session": "^2.3.1",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-handlebars": "^4.0.3",
     "express-session": "^1.17.1",
     "express-validator": "^6.4.0",
